@@ -38,10 +38,10 @@ VALIDATE $? "Copying the MongoDB repo"
 dnf install mongodb-org -y  &>> $LOG_FILE
 VALIDATE $? "Inatallation of MongoDB is"
 
-dnf enable mongod &>> $LOG_FILE
+systemctl enable mongod &>> $LOG_FILE
 VALIDATE $? "Enabling MangoDB is"
 
-dnf start mongod &>> $LOG_FILE
+systemctl start mongod &>> $LOG_FILE
 VALIDATE $? "Starting MongoDB is"
 
 #to edit a file in run time, we use sed editor
